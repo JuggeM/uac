@@ -18,7 +18,8 @@ version: 1.0
 
 artifacts:
 
-  - description: cPanel application error and access logs
+  - 
+    description: cPanel application error and access logs
     supported_os: [linux]
     collector: file
     path: /usr/local/cpanel/logs
@@ -27,7 +28,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: cPanel bundled Apache (non-standard path)
+  - 
+    description: cPanel bundled Apache (non-standard path)
     supported_os: [linux]
     collector: file
     path: /usr/local/apache/logs
@@ -36,7 +38,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: cPanel per-account domain logs (domlogs)
+  -  
+    description: cPanel per-account domain logs (domlogs)
     supported_os: [linux]
     collector: file
     path: /home
@@ -46,7 +49,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: cPhulk brute-force protection and CSF/LFD firewall logs (in /var/log)
+  -  
+    description: cPhulk brute-force protection and CSF/LFD firewall logs (in /var/log)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -55,7 +59,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: WHM account transfer and backup logs
+  -  
+    description: WHM account transfer and backup logs
     supported_os: [linux]
     collector: file
     path: /var/cpanel
@@ -67,7 +72,8 @@ artifacts:
 
 # ── Plesk ─────────────────────────────────────────────────────────────────────
 
-  - description: Plesk control panel and sw-cp-server logs
+  -  
+    description: Plesk control panel and sw-cp-server logs
     supported_os: [linux]
     collector: file
     path: /var/log/sw-cp-server
@@ -76,7 +82,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: Plesk admin logs (panel, httpsd access, health monitor)
+  -  
+    description: Plesk admin logs (panel, httpsd access, health monitor)
     supported_os: [linux]
     collector: file
     path: /usr/local/psa/admin/logs
@@ -85,7 +92,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: Plesk installer, backup manager, and SSO logs
+  -  
+    description: Plesk installer, backup manager, and SSO logs
     supported_os: [linux]
     collector: file
     path: /var/log/plesk
@@ -94,7 +102,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: Plesk per-domain vhost logs (/var/www/vhosts/system/<domain>/logs)
+  -  
+    description: Plesk per-domain vhost logs (/var/www/vhosts/system/<domain>/logs)
     supported_os: [linux]
     collector: file
     path: /var/www/vhosts
@@ -105,7 +114,8 @@ artifacts:
 
 # ── DirectAdmin ───────────────────────────────────────────────────────────────
 
-  - description: DirectAdmin control panel logs (error, security, system, task queue)
+  -  
+    description: DirectAdmin control panel logs (error, security, system, task queue)
     supported_os: [linux]
     collector: file
     path: /var/log/directadmin
@@ -114,7 +124,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: DirectAdmin per-domain Apache logs (/var/log/httpd/domains/)
+  -  
+    description: DirectAdmin per-domain Apache logs (/var/log/httpd/domains/)
     supported_os: [linux]
     collector: file
     path: /var/log/httpd/domains
@@ -123,7 +134,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: DirectAdmin CustomBuild and PHP-FPM logs
+  -  
+    description: DirectAdmin CustomBuild and PHP-FPM logs
     supported_os: [linux]
     collector: file
     path: /usr/local/directadmin/custombuild/logs
@@ -134,7 +146,8 @@ artifacts:
 
 # ── Shared mail infrastructure (all panels) ───────────────────────────────────
 
-  - description: Exim mail logs — main, reject, and panic (cPanel, DA, generic)
+  -  
+    description: Exim mail logs — main, reject, and panic (cPanel, DA, generic)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -143,7 +156,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: Postfix mail logs (Plesk default MTA)
+  -  
+    description: Postfix mail logs (Plesk default MTA)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -152,7 +166,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: Dovecot IMAP/POP3 logs
+  -  
+    description: Dovecot IMAP/POP3 logs
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -163,7 +178,8 @@ artifacts:
 
 # ── Shared FTP infrastructure ─────────────────────────────────────────────────
 
-  - description: ProFTPD logs (DirectAdmin default)
+  -  
+    description: ProFTPD logs (DirectAdmin default)
     supported_os: [linux]
     collector: file
     path: /var/log/proftpd
@@ -172,7 +188,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: PureFTPD logs (cPanel/Plesk common)
+  -  
+    description: PureFTPD logs (cPanel/Plesk common)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -183,7 +200,8 @@ artifacts:
 
 # ── WAF and security tooling ──────────────────────────────────────────────────
 
-  - description: ModSecurity audit log (Apache/LiteSpeed WAF)
+  -  
+    description: ModSecurity audit log (Apache/LiteSpeed WAF)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -192,7 +210,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: ModSecurity audit log (Plesk/Imunify alternative path)
+  -  
+    description: ModSecurity audit log (Plesk/Imunify alternative path)
     supported_os: [linux]
     collector: file
     path: /var/log/modsec_audit.log
@@ -200,7 +219,8 @@ artifacts:
     file_type: [f]
     max_file_size: 500MB
 
-  - description: Imunify360 / ImunifyAV logs (CloudLinux security suite)
+  -  
+    description: Imunify360 / ImunifyAV logs (CloudLinux security suite)
     supported_os: [linux]
     collector: file
     path: /var/log/imunify360
@@ -209,7 +229,8 @@ artifacts:
     file_type: [f]
     max_file_size: 200MB
 
-  - description: Fail2ban logs (used by all panels for brute-force blocking)
+  -  
+    description: Fail2ban logs (used by all panels for brute-force blocking)
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -220,7 +241,8 @@ artifacts:
 
 # ── CloudLinux / CageFS ───────────────────────────────────────────────────────
 
-  - description: CloudLinux and CageFS governor/resource logs
+  -  
+    description: CloudLinux and CageFS governor/resource logs
     supported_os: [linux]
     collector: file
     path: /var/log
@@ -231,7 +253,8 @@ artifacts:
 
 # ── LiteSpeed web server ──────────────────────────────────────────────────────
 
-  - description: LiteSpeed Enterprise and OpenLiteSpeed logs
+  -  
+    description: LiteSpeed Enterprise and OpenLiteSpeed logs
     supported_os: [linux]
     collector: file
     path: /usr/local/lsws/logs
@@ -242,7 +265,8 @@ artifacts:
 
 # ── Panel-agnostic: web root suspicious file hunting ─────────────────────────
 
-  - description: Find web shells and suspicious scripts in common web roots
+  -  
+    description: Find web shells and suspicious scripts in common web roots
     supported_os: [linux]
     collector: find
     path: /var/www
@@ -254,7 +278,8 @@ artifacts:
     output_directory: /live_response/hosting
     output_file: webroot_php_files_var_www.txt
 
-  - description: Find web shells and suspicious scripts in cPanel home dirs
+  -  
+    description: Find web shells and suspicious scripts in cPanel home dirs
     supported_os: [linux]
     collector: find
     path: /home
@@ -266,7 +291,8 @@ artifacts:
     output_directory: /live_response/hosting
     output_file: webroot_php_files_home.txt
 
-  - description: Find recently modified files in web roots (mtime within collection window)
+  -  
+    description: Find recently modified files in web roots (mtime within collection window)
     supported_os: [linux]
     collector: find
     path: /var/www
